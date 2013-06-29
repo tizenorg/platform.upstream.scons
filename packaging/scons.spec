@@ -21,6 +21,7 @@ Group:          Development/Tools/Building
 Version:        2.2.0
 Release:        0
 Source0:        http://freefr.dl.sourceforge.net/project/scons/scons/%{version}/%{name}-%{version}.tar.gz
+Source1001: 	scons.manifest
 Patch0:         %{name}-1.2.0-fix-install.patch
 Patch1:         %{name}-1.2.0-noenv.patch
 Url:            http://www.scons.org/
@@ -36,6 +37,7 @@ full power of Python to control compilation.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 export CFLAGS="$RPM_OPT_FLAGS"
@@ -46,6 +48,7 @@ python setup.py install --prefix=%{_prefix} --root=%{buildroot} --install-lib=%{
 %fdupes %{buildroot}%{_bindir}
 
 %files
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %license LICENSE.txt
 %{_bindir}/*
