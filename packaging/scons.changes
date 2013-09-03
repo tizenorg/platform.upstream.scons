@@ -1,0 +1,3 @@
+* Tue Sep 03 2013 Anas Nashif <anas.nashif@intel.com> accepted/tizen/20130710.214720@c1b2308
+- Fix RPM build error: Patch not found. Removed from spec file.
+
