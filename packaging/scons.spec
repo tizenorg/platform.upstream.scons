@@ -22,8 +22,6 @@ Version:        2.2.0
 Release:        0
 Source0:        http://freefr.dl.sourceforge.net/project/scons/scons/%{version}/%{name}-%{version}.tar.gz
 Source1001: 	scons.manifest
-Patch0:         %{name}-1.2.0-fix-install.patch
-Patch1:         %{name}-1.2.0-noenv.patch
 Url:            http://www.scons.org/
 BuildRequires:  fdupes
 BuildRequires:  python-devel
