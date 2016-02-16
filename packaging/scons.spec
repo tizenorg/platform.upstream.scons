@@ -26,6 +26,10 @@ Url:            http://www.scons.org/
 BuildRequires:  fdupes
 BuildRequires:  python-devel
 
+%if ! %{?license:0}
+%define license %doc
+%endif
+
 %description
 SCons is a make replacement that provides a range of enhanced features,
 such as automated dependency generation and built-in compilation cache
@@ -53,5 +57,5 @@ python setup.py install --prefix=%{_prefix} --root=%{buildroot} --install-lib=%{
 %{python_sitearch}/SCons/
 %{python_sitearch}/*.egg-info
 %{_mandir}/man1/*.gz
+%{_libdir}/*
 
-%changelog
